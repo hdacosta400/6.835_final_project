@@ -4,6 +4,7 @@
 On MAC:
 
 For speech input, run:
+
   pip install SpeechRecognition
   
   brew install portaudio 
