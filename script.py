@@ -111,6 +111,9 @@ def scrape_transcript_for_commands(transcript):
         # for some reason pynput does not work in spotlight search?
         pyautogui.typewrite(' '.join(words[1:])) # assuming phrase is "open <app>"
         keyboard.tap(Key.enter)
+    if "close" in transcript: # MAC specific, quitting application
+        with keyboard.pressed(Key.cmd):
+            keyboard.tap('q')
 
     # browser controls
     if "tab" in transcript:
